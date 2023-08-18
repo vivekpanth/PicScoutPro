@@ -7,13 +7,14 @@ let inputdata = "";
 let page = 1;
 
 async function searchimages() {
-  inputdata = inputEl.value;
-  const url = `https://api.unsplash.com/users/search/photos?page=${page}&query=${inputdata}&client_id=${accessKey}`;
+  const inputdata = inputEl.value;
+  const url =`https://api.unsplash.com/search/photos?page=${page}&query=${inputdata}&client_id=${accessKey}`;
   const response = await fetch(url);
   const data = await response.json();
+  console.log(data.results)
   const results = data.results;
   if (page === 1) {
-    searchResults.innerHTML = "";
+    searchResults.innerHTML ="";
   }
   results.map((result) => {
     const imagewrapper = document.createElement("div");
@@ -37,6 +38,7 @@ async function searchimages() {
 }
 
 formEl.addEventListener('submit',(event)=>{
+    console.log("but clicked")
     event.preventDefault()
     page=1;
     searchimages()
