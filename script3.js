@@ -48,6 +48,6 @@ showMore.addEventListener('click',()=>{
     
     searchimages()
 })
-foooter.addEventListener('click',()=>{
+foooter.addEventListener('click',( )=>{
     foooter.innerHTML= "made by vivek panth..."
 })
