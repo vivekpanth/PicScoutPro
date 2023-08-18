@@ -107,4 +107,11 @@ form{
   }
   }
 
-
+  .foooter{
+  text-align: right;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 25px;
+  display: block;
+  color: rgb(11, 204, 238);
+  }

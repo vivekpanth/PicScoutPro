@@ -3,6 +3,7 @@ const formEl = document.querySelector("form");
 const inputEl = document.getElementById("search-input");
 const searchResults = document.querySelector(".search-results");
 const showMore = document.getElementById("show-more-button");
+const foooter=document.querySelector("p")
 let inputdata = "";
 let page = 1;
 
@@ -46,4 +47,7 @@ formEl.addEventListener('submit',(event)=>{
 showMore.addEventListener('click',()=>{
     
     searchimages()
+})
+foooter.addEventListener('click',()=>{
+    foooter.innerHTML= "made by vivek panth..."
 })
